@@ -3,10 +3,10 @@ import argparse
 import paramiko
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--hostname', type = str, default = '10.101.169.60', help = 'Hostname')
+parser.add_argument('--hostname', type = str, default = '', help = 'Hostname')
 parser.add_argument('--port', type = str, default = '22', help = 'Port')
-parser.add_argument('--username', type = str, default = 'cuihaoran', help = 'Username')
-parser.add_argument('--passcode', type = str, default = '981216', help = 'Passcode')
+parser.add_argument('--username', type = str, default = '', help = 'Username')
+parser.add_argument('--passcode', type = str, default = '', help = 'Passcode')
 parser.add_argument('--dataset', type = str, default = 'Potsdam', help = 'Dataset')
 parser.add_argument('--first', type = str, default = '-1', help = 'test 1')
 parser.add_argument('--second', type = str, default = '-1', help = 'test 2')
