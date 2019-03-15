@@ -81,8 +81,7 @@ for line in lines:
 #print(target)
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-#ssh.connect(hostname='10.201.18.116', port=22, username='zhengyumin', password='0529')
-#ssh.connect(hostname='10.101.160.155', port=22, username='zhuqingtian', password='skythelulu')
+
 ssh.connect(hostname=arg.hostname, port=arg.port, username=arg.username, password=arg.passcode)
 #folder = '~/Downloads/receive/' #the directory used to save target_pic
 #folder = '/Users/zhengyumin/Downloads/receive/'
