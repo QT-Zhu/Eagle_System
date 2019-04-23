@@ -56,7 +56,7 @@ Within `/TX2/PDB/pics/` is the picture database of the project. So far we only 1
 汽车数量： 0
 ```
 
-For convenience, `/TX2/PDB/pics/` and `/TX2/PDB/PDB.txt` is attached with [Baidu Netdisk](https://pan.baidu.com/s/1mLTFbAPvMdDI5UempxEX5w) (PW: 0yj6).
+For convenience, a preliminary dataset is provided for demonstration of demo. `/TX2/PDB/pics/` and `/TX2/PDB/PDB.txt` is attached with [Baidu Netdisk](https://pan.baidu.com/s/1mLTFbAPvMdDI5UempxEX5w) (PW: 0yj6). This dataset is based on Potsdam published by ISPRS. You can check [this website](http://www2.isprs.org/commissions/comm3/wg4/semantic-labeling.html) for more information. If you are interested in human-labelled object detection ground truth of Potsdam, feel comfortable to contact.
 
 ## To Ultilize "The Eagle"
 
@@ -69,7 +69,13 @@ For convenience, `/TX2/PDB/pics/` and `/TX2/PDB/PDB.txt` is attached with [Baidu
 
 ## What's Next
 
-- [ ] Replace current object detection reults with better ones
+- [x] Replace current object detection reults with better ones
 - [ ] Refine the code
 - [ ] Better GUI design
 - [ ] Complete personal mode
+
+## Acknowledgement
+
+Sincere tribute to all memebers that have contributed to this repo (names not listed in order): *Haoran Cui*, *Yumin Zheng*, *Qingtian Zhu*, *Xi Xia*, *Xingyi Li*.
+
+Additional, tribute to members having contributed to the dataset used to train object detection algorithms which is absent in the officially published dataset (names not listed in order): *Jingjing Wei*, *Kai Kang*, *Zhaofeng Wang*, *Yijian Liu*, *Wenqian Cui*.
