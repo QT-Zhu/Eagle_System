@@ -1,6 +1,5 @@
 import os
 
-#rootdir = 'C:\\Users\\34322\\Desktop\\out'
 rootdir = '/home/jiangyl/pics'
 list = os.listdir(rootdir) #列出文件夹下所有的目录与文件
 
