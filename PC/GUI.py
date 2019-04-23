@@ -11,7 +11,7 @@ import socket
 
 #服务器账户
 ServerHostname = ''
-ServerPort = '22'
+ServerPort = '22' #default port
 ServerUsername = ''
 ServerPassword = ''
 
