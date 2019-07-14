@@ -13,6 +13,8 @@ def label2annotation(pic):
     # input:  8 bits picture
     # output: 24 bits picture
 
+    #Potsdam dataset only
+
     new_pic = np.zeros([512, 512, 3])
     for i in range(pic.shape[0]):
         for j in range(pic.shape[1]):
@@ -87,8 +89,8 @@ if __name__ == '__main__':
     with tf.Session() as sess:
         sess.run(tf.global_variables_initializer())
         saver = tf.train.Saver()
-        saver.restore(sess, "./model/512_potsdam_model50")
-        image_paths = glob(os.path.join('/server_space/jiangyl/zhu_useful/Potsdam_512_full/test/img', '*.bmp'))
+        saver.restore(sess, "xxx") #dir of model
+        image_paths = glob(os.path.join('xxx', '*.bmp')) #dir of testing set
         for image_file in image_paths:
             image = scipy.misc.imresize(scipy.misc.imread(image_file, mode='RGB'), image_shape)
             image = np.expand_dims(image, 0)
@@ -110,17 +112,11 @@ if __name__ == '__main__':
             kappa = conf_mat2_kappa(cms)
 
             img = label2annotation(labels)
-# gt = np.load(os.path.join(target_dir,name[:-3]+'npy'))  
- #   oa,cm = calculate_metrics(mask.transpose(1,0),gt,6)
- #   oas = oa+oas   
- #   cms = cm + cms
-#kappa = conf_mat2_kappa(cms)
-#kappa = conf_mat2_kappa(cms)
             total_time = total_time+time_1
-            result = open(os.path.join(target,'again_ICNET001-50.txt'),'w')
+            result = open(os.path.join(target,'xxx'),'w') #dir to save accuracy result
             print >> result, 'OA:', oas/count
             print >> result, 'confusion_matrix:', cms
             print >> result, 'kappa:',kappa
             print >> result, 'time:',total_time
             print(time_1)
-            scipy.misc.imsave('/server_space/jiangyl/zhu_useful/ICNet_5C/output/001/'+os.path.basename(image_file).split('.')[0] + ".bmp", img, "bmp")
+            scipy.misc.imsave('xxx'+os.path.basename(image_file).split('.')[0] + ".bmp", img, "bmp") #save testing result pics

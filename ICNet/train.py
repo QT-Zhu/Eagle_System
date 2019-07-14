@@ -1,3 +1,6 @@
+
+#modify from https://github.com/k0suke-murakami/ICNet/blob/master/main.py
+
 import re
 import random
 import os.path
@@ -9,50 +12,12 @@ import scipy.misc
 import numpy as np
 import os
 from time import time
-log_dir = '/server_space/jiangyl/zhu_useful/ICNet_5C/record/'
+log_dir = 'xxx'# dir of the log
 
 def transform_annotation(pic):
     label_map = np.zeros([512, 512, 6])
-
-    # input : RGB picture
-    # output: one channel picture
-    #         4 others
-    #         3 blue       0   0   255
-    #         2 green      0   255 0
-    #         1 dark grey  200 200 200
-    #         0 dark green 30  100 30
-    # low efficiency
-#    for i in range(pic.shape[0]):
- #       for j in range(pic.shape[1]):
-  #          if pic[i][j][0] == 255 and pic[i][j][1] == 255 and pic[i][j][2] == 255:
-   #             label_map[i][j] = np.array([1, 0, 0, 0, 0,0])
-    #        elif pic[i][j][0] == 0 and pic[i][j][1] == 0 and pic[i][j][2] == 255:
-     #           label_map[i][j] = np.array([0, 1, 0, 0, 0,0])
-      #      elif pic[i][j][0] == 0 and pic[i][j][1] == 255 and pic[i][j][2] == 255:
-       #         label_map[i][j] = np.array([0, 0, 1, 0, 0,0])
-        #    elif pic[i][j][0] == 0 and pic[i][j][1] == 255 and pic[i][j][2] == 0:
-         #       label_map[i][j] = np.array([0, 0, 0, 1, 0,0])
-          #  elif pic[i][j][0] == 255 and pic[i][j][1] == 255 and pic[i][j][2] == 0:
-           #     label_map[i][j] = np.array([0, 0, 0, 0, 1,0])
-           # elif pic[i][j][0] == 255 and pic[i][j][1] == 0 and pic[i][j][2] == 0:
-            #    label_map[i][j] = np.array([0, 0, 0, 0, 0,1])
-        #label_map = label_map.transpose(2, 0, 1)
-
-   # for i in range(pic.shape[0]):
-    #    for j in range(pic.shape[1]):
-     #       if pic[i][j][1] == 255 and pic[i][j][2] == 0:
-      #          label_map[i][j] = np.array([0, 0, 1, 0, 0])
-       #     elif pic[i][j][1] == 200 and pic[i][j][2] == 200:
-        #        label_map[i][j] = np.array([0, 1, 0, 0, 0])
-         #   elif pic[i][j][1] == 100 and pic[i][j][2] == 30:
-          #      label_map[i][j] = np.array([1, 0, 0, 0, 0])
-           # elif pic[i][j][1] == 0 and pic[i][j][2] == 255:
-            #    label_map[i][j] = np.array([0, 0, 0, 1, 0])
-           # else:
-            #    label_map[i][j] = np.array([0, 0, 0, 0, 1])
     label_map = np.load(pic + '.npy')
     label_map = label_map.transpose(1,2,0)
-    print('label_map',label_map.shape)
     return label_map.astype(np.uint8)
 
 
@@ -155,7 +120,7 @@ def train_nn():
     train_op = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cross_entropy_loss)
 
     # get data function
-    get_batches_fn = gen_batch_function('/server_space/jiangyl/zhu_useful/Potsdam_512_full/train', image_shape)
+    get_batches_fn = gen_batch_function('xxx', image_shape) #the dir of training set
 
     # train
     max_loss = 99999999
@@ -184,6 +149,10 @@ def train_nn():
             logs.write('overall loss:%f\n'%(loss))
 
             logs.flush()
+
+
+            #strategy of model saving
+
             if epoch >0 and epoch <=50:
                 if epoch % 2 == 0:
                     saver.save(sess, "./model/again/512_potsdam_model%d"%epoch)

@@ -1,3 +1,4 @@
+#from https://github.com/k0suke-murakami/ICNet/blob/master/model.py
 import tensorflow as tf
 import tensorflow.contrib.slim as slim
 import scipy.misc
