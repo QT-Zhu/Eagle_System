@@ -1,8 +1,6 @@
 # Eagle_System
 Initially created in December, 2018 for the Innovation Project for College Students of Beijing University of Posts and Telecommunications. The project is fully named as **"The Eagle" Remote Sensing Reconnaissance System**.
 
-![](https://ws3.sinaimg.cn/large/006tNc79ly1g2ckg16156j30u00u0mzz.jpg)
-
 It's a demo designed with GUI capable to access the picture database on a remote terminal and do simple search based on given conditions. The remote terminal can also run deep learning algorithms independently when necessary to get semantic information of an image.
 
 ## Overall Procedure
@@ -76,6 +74,6 @@ For convenience, a preliminary dataset is provided for demonstration of demo. `/
 
 ## Acknowledgement
 
-Sincere tribute to all memebers that have contributed to this repo (names not listed in order): *Haoran Cui*, *Yumin Zheng*, *Qingtian Zhu*, [*Xi Xia*](https://xiaxii.github.io/), *Xingyi Li*.
+Sincere tribute to all memebers that have contributed to this repo (names not listed in order): *Haoran Cui*, *Yumin Zheng*, [*Qingtian Zhu*](https://qt-zhu.github.io), [*Xi Xia*](https://xiaxii.github.io/), *Xingyi Li*.
 
 Additional, tribute to members having contributed to the dataset used to train object detection algorithms which is absent in the officially published dataset (names not listed in order): *Jingjing Wei*, *Kai Kang*, *Zhaofeng Wang*, *Yijian Liu*, *Wenqian Cui*.
