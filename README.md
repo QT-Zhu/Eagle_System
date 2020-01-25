@@ -76,6 +76,6 @@ For convenience, a preliminary dataset is provided for demonstration of demo. `/
 
 ## Acknowledgement
 
-Sincere tribute to all memebers that have contributed to this repo (names not listed in order): *Haoran Cui*, *Yumin Zheng*, *Qingtian Zhu*, *Xi Xia*, *Xingyi Li*.
+Sincere tribute to all memebers that have contributed to this repo (names not listed in order): *Haoran Cui*, *Yumin Zheng*, *Qingtian Zhu*, [*Xi Xia*](https://xiaxii.github.io/), *Xingyi Li*.
 
 Additional, tribute to members having contributed to the dataset used to train object detection algorithms which is absent in the officially published dataset (names not listed in order): *Jingjing Wei*, *Kai Kang*, *Zhaofeng Wang*, *Yijian Liu*, *Wenqian Cui*.
