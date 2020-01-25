@@ -1,7 +1,7 @@
 # Eagle_System
 Initially created in December, 2018 for the Innovation Project for College Students of Beijing University of Posts and Telecommunications. The project is fully named as **"The Eagle" Remote Sensing Reconnaissance System**.
 
-![](illustration/logo.png)
+![](https://github.com/QT-Zhu/Eagle_System/blob/master/illustration/logo.png)
 
 It's a demo designed with GUI capable to access the picture database on a remote terminal and do simple search based on given conditions. The remote terminal can also run deep learning algorithms independently when necessary to get semantic information of an image.
 
@@ -19,7 +19,7 @@ Personal mode has not completed.
 
 The procedure of corporate mode is described as the sequece graph below. 
 
-![](illustration/flow.png)
+![](https://github.com/QT-Zhu/Eagle_System/blob/master/illustration/flow.png)
 
 ## File Structure
 
