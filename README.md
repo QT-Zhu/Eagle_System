@@ -1,6 +1,8 @@
 # Eagle_System
 Initially created in December, 2018 for the Innovation Project for College Students of Beijing University of Posts and Telecommunications. The project is fully named as **"The Eagle" Remote Sensing Reconnaissance System**.
 
+![](illustration/logo.png)
+
 It's a demo designed with GUI capable to access the picture database on a remote terminal and do simple search based on given conditions. The remote terminal can also run deep learning algorithms independently when necessary to get semantic information of an image.
 
 ## Overall Procedure
@@ -17,7 +19,7 @@ Personal mode has not completed.
 
 The procedure of corporate mode is described as the sequece graph below. 
 
-![](https://ws4.sinaimg.cn/large/006tKfTcly1g0ztdhzf3kj31050u0k4n.jpg)
+![](illustration/flow.png)
 
 ## File Structure
 
