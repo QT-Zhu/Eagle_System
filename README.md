@@ -5,21 +5,11 @@ Initially created in December, 2018 for the Innovation Project for College Stude
 
 It's a demo designed with GUI capable to access the picture database on a remote terminal and do simple search based on given conditions. The remote terminal can also run deep learning algorithms independently when necessary to get semantic information of an image.
 
-## Overall Procedure
+## Overview
 
 The system is designed to have 2 different modes concerning different demands and user scenarios: personal mode and corporate mode. 
 
 There are totally 2 ends involved, namely local PC and remote TX2 (short for NVIDIA Jetson TX2). It is worth noting that TX2 can be replaced by any embedded platform with stronger computational capability, such as latest NVIDIA Jetson Xavier.
-
-### Personal Mode
-
-Personal mode has not completed.
-
-### Corporate Mode
-
-The procedure of corporate mode is described as the sequece graph below. 
-
-![](https://github.com/QT-Zhu/Eagle_System/blob/master/illustration/flow.png)
 
 ## File Structure
 
